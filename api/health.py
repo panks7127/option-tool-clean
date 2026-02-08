@@ -1,12 +1,8 @@
 import json
 
 def handler(request):
-    return {
-        "statusCode": 200,
-        "headers": {
-            "Content-Type": "application/json"
-        },
-        "body": json.dumps({
-            "status": "ok"
-        })
-    }
+    return (
+        json.dumps({"status": "ok"}),
+        200,
+        {"Content-Type": "application/json"},
+    )
